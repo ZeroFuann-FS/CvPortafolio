@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZeroFuann — Jose Juan Juarez Martinez. Portafolio personal de desarrollador fullstack especializado en tecnologías web modernas." />
+  <meta name="keywords" content="ZeroFuann, fullstack, developer, portafolio, React, Vue, Laravel, Python" />
+  <meta name="author" content="Jose Juan Juarez Martinez" />
+  <meta property="og:title" content="ZeroFuann — Portafolio Personal" />
+  <meta property="og:description" content="Desarrollador Fullstack apasionado por la tecnología, el diseño y la IA." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>ZeroFuann — Portafolio Personal</title>
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- Devicons for tech icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/2.15.1/iconfont/devicons.min.css">
+  <!-- Font Awesome for misc icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="#inicio" class="nav-logo">Zero<span>Fuann</span></a>
+
+      <!-- Desktop Menu -->
+      <ul class="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#acerca">Acerca de mí</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <!-- Theme toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+          <div class="theme-toggle-thumb" id="themeIcon">🌙</div>
+        </button>
+
+        <!-- GitHub -->
+        <a href="https://github.com/ZeroFuann" target="_blank" rel="noopener" class="nav-icon-btn" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="nav-icon-btn" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <!-- Download CV -->
+        <a href="#" class="cv-btn" id="downloadCV" aria-label="Descargar CV">
+          <i class="fas fa-download"></i>
+          <span>CV</span>
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#inicio" onclick="closeMobile()">Inicio</a>
+      <a href="#acerca" onclick="closeMobile()">Acerca de mí</a>
+      <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#proyectos" onclick="closeMobile()">Proyectos</a>
+      <a href="#contacto" onclick="closeMobile()">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="inicio">
+    <div class="hero-inner">
+
+      <div class="hero-content">
+        <div class="hero-badge">Disponible para proyectos</div>
+        <p class="hero-greeting">Hola, soy</p>
+        <h1 class="hero-name">
+          <span class="text-light">Zero</span><span class="text-accent">Fuann</span>
+        </h1>
+        <p class="hero-role">
+          Estudiante de <span class="highlight">TIC</span> → <span class="highlight">Fullstack Development</span>
+        </p>
+        <p class="hero-desc">
+          Me llamo <strong>Jose Juan Juarez Martinez</strong>. Estudio Tecnologías de la Información y Comunicaciones, pero donde realmente me encuentro es en el código: construyendo interfaces que conectan diseño, lógica e inteligencia artificial.
+        </p>
+        <div class="hero-social">
+          <a href="mailto:josejuanjuarezmartinez14@gmail.com" class="hero-social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/ZeroFuann" target="_blank" class="hero-social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="hero-social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-image-frame">
+          <!-- Reemplaza este placeholder con tu imagen real: <img src="tu-foto.jpg" alt="Jose Juan Juarez Martinez" class="hero-img"> -->
+          <div class="hero-avatar-placeholder">
+          <img src="img/Perfil.jpeg" alt="">
+          </div>
+        </div>
+
+        <div class="hero-tag">
+          <div class="hero-tag-dot"></div>
+          <span>Open to work</span>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stats-num">∞</div>
+          <div class="hero-stats-label">Ideas / day</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="acerca">
+    <div class="container">
+      <div class="about-inner reveal">
+
+        <div class="about-image-wrap">
+          <div class="about-img-frame">
+            <!-- <img src="about-photo.jpg" alt="Jose Juan - About"> -->
+            <div class="about-avatar-placeholder">
+              <img src="img/Perfil.jpeg" alt="Jose Juan - About">
+
+            </div>
+          </div>
+          <div class="about-corner-tag">ITSM · Misantla</div>
+        </div>
+
+        <div class="about-content">
+          <p class="section-label">Sobre mí</p>
+          <h2 class="section-title">Código,<br>diseño & pasión</h2>
+          <div class="section-divider"></div>
+
+          <p class="about-text">
+            Soy <strong>Jose Juan Juarez Martinez</strong>, alias <strong>ZeroFuann</strong>, estudiante de Tecnologías de la Información y Comunicaciones en el <strong>Instituto Tecnológico Superior de Misantla</strong>. Mi camino académico me dio las bases; el desarrollo fullstack me dio el propósito.
+          </p>
+          <p class="about-text">
+            Me atrae construir productos completos: desde la arquitectura del backend hasta la última animación del frontend. Me fascina la intersección entre <strong>tecnología, diseño visual e inteligencia artificial</strong>. Cada proyecto es una oportunidad de aprender algo nuevo y crear algo que resuelva problemas reales.
+          </p>
+          <p class="about-text">
+            Cuando no estoy programando, estoy explorando nuevas herramientas, experimentando con IA o pensando en el siguiente side project.
+          </p>
+
+          <div class="about-chips">
+            <span class="about-chip"># Fullstack</span>
+            <span class="about-chip"># UI/UX</span>
+            <span class="about-chip"># IA / ML</span>
+            <span class="about-chip"># Open Source</span>
+            <span class="about-chip"># Side Projects</span>
+            <span class="about-chip"># Diseño</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Tecnologías</p>
+        <h2 class="section-title">Stack &<br>Herramientas</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="skills-grid-wrap">
+
+        <!-- Languages & Libraries -->
+        <div class="reveal reveal-delay-1">
+          <p class="skill-category-title">Lenguajes y Librerías</p>
+          <div class="skills-row">
+            <div class="skill-chip"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</div>
+            <div class="skill-chip"><i class="fab fa-js-square"></i> JavaScript</div>
+            <div class="skill-chip">
+              <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" style="color:var(--accent-1)"><path d="M0 0h32v32H0V0zm9.498 24.04l4.528-4.56a2.56 2.56 0 0 0 3.547 0l1.963 3.014a5.12 5.12 0 0 1-6.86 1.826L9.498 24.04zM16 19.84a3.84 3.84 0 1 1 0-7.68 3.84 3.84 0 0 1 0 7.68zm4.502 4.2-1.963-3.014a2.56 2.56 0 0 0 0-3.547l4.528-4.56a5.12 5.12 0 0 1-2.565 11.12z"/></svg>
+              TypeScript
+            </div>
+            <div class="skill-chip"><i class="fab fa-react"></i> React</div>
+            <div class="skill-chip"><i class="fab fa-vuejs"></i> Vue.js</div>
+            <div class="skill-chip"><i class="fab fa-python"></i> Python</div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Design -->
+        <div class="reveal reveal-delay-2">
+          <p class="skill-category-title">Frameworks y Diseño</p>
+          <div class="skills-row">
+            <div class="skill-chip"><i class="fab fa-laravel"></i> Laravel</div>
+            <div class="skill-chip"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+            <div class="skill-chip">
+              <svg width="18" height="18" viewBox="0 0 54 33" fill="none" style="color:var(--accent-1)"><path fill-rule="evenodd" clip-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" fill="currentColor"/></svg>
+              Tailwind CSS
+            </div>
+            <div class="skill-chip">
+              <svg width="18" height="18" viewBox="0 0 38 57" fill="none" style="color:var(--accent-1)"><path d="M19 0L0 10.5V31.5L19 42L38 31.5V10.5L19 0Z" fill="currentColor" opacity="0.5"/><path d="M19 57L0 46.5V25.5L19 36V57Z" fill="currentColor" opacity="0.8"/><path d="M19 57L38 46.5V25.5L19 36V57Z" fill="currentColor"/></svg>
+              Figma
+            </div>
+          </div>
+        </div>
+
+        <!-- DevOps & Version Control -->
+        <div class="reveal reveal-delay-3">
+          <p class="skill-category-title">Despliegue y Control</p>
+          <div class="skills-row">
+            <div class="skill-chip"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill-chip"><i class="fab fa-github"></i> GitHub</div>
+            <div class="skill-chip">
+              <svg width="18" height="18" viewBox="0 0 76 65" fill="currentColor" style="color:var(--accent-1)"><path d="M37.5274 0L75.0548 65H0L37.5274 0Z"/></svg>
+              Vercel
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialized Tools -->
+        <div class="reveal">
+          <p class="skill-category-title">Herramientas Especializadas</p>
+          <div class="skills-row">
+            <div class="skill-chip">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent-1)"><path d="M3.906 7.379a4.49 4.49 0 0 1 3.27-3.27C8.386 3.822 12 3.822 12 3.822s3.614 0 4.824.287a4.49 4.49 0 0 1 3.27 3.27C20.381 8.589 20.381 12 20.381 12s0 3.411-.287 4.621a4.49 4.49 0 0 1-3.27 3.27C15.614 20.178 12 20.178 12 20.178s-3.614 0-4.824-.287a4.49 4.49 0 0 1-3.27-3.27C3.619 15.411 3.619 12 3.619 12s0-3.411.287-4.621zm6.38 6.845L15.714 12l-5.43-2.224v4.448z"/></svg>
+              YOLO
+            </div>
+            <div class="skill-chip"><i class="fab fa-android"></i> Android Studio</div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="reveal">
+          <div class="education-wrap">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <p class="edu-label">Formación académica</p>
+              <p class="edu-degree">Tecnologías de la Información y Comunicaciones</p>
+              <p class="edu-school">Instituto Tecnológico Superior de Misantla</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="proyectos">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Portafolio</p>
+        <h2 class="section-title">Proyectos<br>destacados</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- Project 01 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/Lupac_Industrial_Equipment/Lupac_Industrial_Equipment.png" alt="Lupac Industrial Equipment">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">— 01</p>
+            <h3 class="project-title">Lupac Industrial Equipment</h3>
+            <p class="project-desc">
+              Catálogo digital de maquinaria industrial diseñado para cargar rápido y posicionar mejor en buscadores. Estructura SEO desde el contenido, componentes reutilizables con React y estilos consistentes con Tailwind.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Tailwind CSS</span>
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">Vercel</span>
+            </div>
+            <a href="https://lu-pac.com/" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Ver proyecto
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 02 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+          <img src="img/MINEA COMPANY/MINEA COMPANY.png" alt="Minea Company">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">— 02</p>
+            <h3 class="project-title">Minea Company</h3>
+            <p class="project-desc">
+              Sitio corporativo para presentar productos de gomitas con una experiencia moderna, clara y fácil de administrar. Diseño con Tailwind CSS y enfoque en UI/UX para que la marca se perciba profesional desde el primer scroll.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Tailwind CSS</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">UI/UX</span>
+              <span class="project-tag">Responsive</span>
+            </div>
+            <a href="https://minea05-company.vercel.app/" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Ver proyecto
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 03 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/NEXUS-TIC/NEXUSTIC.png" alt="Nexus-TIC">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">— 03</p>
+            <h3 class="project-title">Nexus-TIC</h3>
+            <p class="project-desc">
+              Proyecto actualmente en desarrollo. Construcción de una base sólida de interfaz y contenido para evolucionarlo hacia un sitio completo, rápido y listo para escalar.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Diseño en curso</span>
+              <span class="project-tag">Vercel</span>
+            </div>
+            <a href="https://nexus-tic.vercel.app/" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Ver avance
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 04 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/Fana/Fana.png" alt="Fana">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">— 04</p>
+            <h3 class="project-title">Fana</h3>
+            <p class="project-desc">
+              Landing page estática orientada a ingeniería vial: secciones claras para servicios, proyectos y contacto. HTML semántico, CSS bien estructurado y JavaScript para mejorar la interacción y la navegación.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Landing</span>
+            </div>
+            <a href="https://fana-olive.vercel.app/" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Ver proyecto
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 05 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/GRUPO MANBAL/GRUPO MANBAL.png" alt="Grupo MANBAL">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">— 05</p>
+            <h3 class="project-title">Grupo MANBAL</h3>
+            <p class="project-desc">
+              Landing informativa diseñada para presentar servicios, costos y vías de contacto de forma directa. Interfaz consistente, estructura ligera y JavaScript para acciones rápidas donde se necesite.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Responsive</span>
+            </div>
+            <a href="https://manbal-nu.vercel.app/" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Ver proyecto
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 06 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/PAGINA TICS/PAGINA TICS.png" alt="Página Carrera ITCS">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">— 06</p>
+            <h3 class="project-title">Página Carrera ITCS</h3>
+            <p class="project-desc">
+              Sitio educativo enfocado en informar sobre la carrera de TIC en el Instituto Tecnológico Superior de Misantla. Estructura clara por secciones para que aspirantes encuentren rápidamente plan de estudios, requisitos y orientación.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Accesible</span>
+            </div>
+            <a href="https://ingentecnologias.com/" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Ver proyecto
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 07 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+          <img src="img/PORTAFOLIO 1/PORTAFOLIO 1.png" alt="Portafolio personal 1">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">— 07</p>
+            <h3 class="project-title">Portafolio personal 1</h3>
+            <p class="project-desc">
+              Portafolio web construido con HTML, CSS y JavaScript. Se enfoca en presentar proyectos de forma ordenada, con secciones legibles, buena jerarquía visual y micro-interacciones para mejorar la experiencia.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">UI</span>
+            </div>
+            <a href="#" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Ver proyecto
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 08 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/PORTAFOLIO 2/PORTAFOLIO 2.png" alt="Portafolio personal 2">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">— 08</p>
+            <h3 class="project-title">Portafolio personal 2</h3>
+            <p class="project-desc">
+              Versión moderna del portafolio con React y Tailwind CSS. Componentes reutilizables, diseño consistente y una experiencia más dinámica para mostrar habilidades y proyectos con mayor impacto.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Tailwind CSS</span>
+              <span class="project-tag">Componentes</span>
+              <span class="project-tag">Responsive</span>
+            </div>
+            <a href="https://cv-portafolio-zero-fuann.vercel.app/" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Ver proyecto
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contacto">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Contacto</p>
+        <h2 class="section-title">Trabajemos<br>juntos</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="contact-inner">
+
+        <!-- Form -->
+        <div class="contact-form-wrap reveal">
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Nombre</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="social">Sitio web o red social</label>
+              <input type="text" id="social" name="social" class="form-input" placeholder="https://... o @usuario">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Mensaje</label>
+              <textarea id="message" name="message" class="form-input" placeholder="Cuéntame sobre tu proyecto o idea..." required></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <i class="fas fa-paper-plane"></i>
+                Enviar mensaje
+              </button>
+              <div class="form-social-icons">
+                <a href="mailto:josejuanjuarezmartinez14@gmail.com" class="form-social-link" aria-label="Gmail">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a href="https://github.com/ZeroFuann" target="_blank" class="form-social-link" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="form-social-link" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </form>
+          <p class="form-status" id="formStatus"></p>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info reveal reveal-delay-2">
+          <div class="contact-message">
+            ¿Tienes un proyecto en mente, quieres colaborar o simplemente quieres hablar sobre tecnología? Mi bandeja de entrada siempre está abierta.
+          </div>
+
+          <div class="contact-info-block">
+            <p class="contact-info-label">Correo electrónico</p>
+            <p class="contact-info-value">
+              <a href="mailto:josejuanjuarezmartinez14@gmail.com">josejuanjuarezmartinez14@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="contact-info-block">
+            <p class="contact-info-label">Teléfono</p>
+            <p class="contact-info-value">
+              <a href="tel:+5212221234567">+52 (232) 103-7983</a>
+              <span style="font-size:0.75rem;color:var(--text-muted);font-family:'Space Mono',monospace;display:block;margin-top:0.25rem;">[Habla a este número para que te contacte]</span>
+            </p>
+          </div>
+
+          <div class="contact-info-block">
+            <p class="contact-info-label">Ubicación</p>
+            <p class="contact-info-value">Misantla, Veracruz · México</p>
+          </div>
+
+          <div class="contact-availability">
+            <div class="avail-dot"></div>
+            <p class="avail-text">Disponible para proyectos freelance y colaboraciones</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Zero<span>Fuann</span></div>
+        <p class="footer-copy">© 2026 Portafolio Personal</p>
+        <p class="footer-update" id="lastUpdated">Última actualización: —</p>
+      </div>
+    </div>
+  </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
