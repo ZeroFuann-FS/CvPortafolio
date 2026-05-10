@@ -54,6 +54,7 @@
     html {
       scroll-behavior: smooth;
       font-size: 16px;
+      overflow-x: hidden;
     }
 
     body {
@@ -288,23 +289,50 @@
       top: 64px;
       left: 0;
       right: 0;
+      width: 100%;
+      max-height: calc(100vh - 64px);
+      overflow-y: auto;
       background: var(--nav-bg);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      padding: 1rem 2rem 1.5rem;
+      padding: 1rem 1.5rem 1.5rem;
       z-index: 999;
       flex-direction: column;
-      gap: 0.25rem;
+      gap: 0.5rem;
     }
 
-    .mobile-menu.open { display: flex; }
+    .mobile-menu.open {
+      display: flex;
+      animation: fadeIn 0.2s ease forwards;
+    }
+
+    .mobile-menu-close {
+      align-self: flex-end;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .mobile-menu-close:hover {
+      background: var(--accent-1);
+      color: var(--black);
+      border-color: var(--accent-1);
+    }
+
     .mobile-menu a {
-      font-size: 1rem;
-      font-weight: 500;
+      font-size: 1.05rem;
+      font-weight: 600;
       color: var(--text-secondary);
-      padding: 0.75rem 0;
+      padding: 1rem 0;
       border-bottom: 1px solid var(--border-light);
       transition: color var(--transition);
+      text-align: left;
     }
     .mobile-menu a:hover { color: var(--text-primary); }
 
@@ -1329,15 +1357,21 @@
     @media (max-width: 768px) {
       .nav-menu { display: none; }
       .hamburger { display: flex; }
-      .nav-actions { gap: 0.35rem; }
-      .nav-icon-btn,
-      .cv-btn { display: none; }
+      .nav-actions { display: none; }
+      .nav-inner {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+        padding: 0 1rem;
+      }
       section { padding: 3rem 0; }
 
       .form-row { grid-template-columns: 1fr; }
       .hero-image-frame { max-width: 280px; }
-      .hero-tag { left: 0; }
-      .hero-stats { right: 0; }
+      .hero-image-frame::after { inset: -16px; }
+      .hero-tag,
+      .hero-stats { display: none; }
+      .hero-image-wrap { width: 100%; padding: 0 0.75rem; }
       .education-wrap { flex-direction: column; text-align: center; }
       .cv-btn span { display: none; }
       .hero-desc { margin-bottom: 2rem; }
@@ -1354,6 +1388,7 @@
       }
       .nav-logo { font-size: 1.1rem; }
       .hero-image-frame { max-width: 240px; }
+      .hero-image-frame::after { inset: -12px; }
       .hero-stats, .hero-tag { display: none; }
       .hero-name { font-size: clamp(2.5rem, 10vw, 4rem); }
       .hero-desc { font-size: 0.95rem; margin-bottom: 1.75rem; }
