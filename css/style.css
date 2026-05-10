@@ -476,15 +476,16 @@
 
     .hero-image-frame {
       position: relative;
-      width: 400px;
-      height: 480px;
+      width: min(100%, 400px);
+      max-width: 400px;
+      aspect-ratio: 5 / 6;
       flex-shrink: 0;
     }
 
     .hero-image-frame::before {
       content: '';
       position: absolute;
-      inset: -12px;
+      inset: -10px;
       border: 1px solid var(--border);
       border-radius: 20px;
       z-index: 0;
@@ -1305,13 +1306,13 @@
        RESPONSIVE
     ============================================= */
     @media (max-width: 1024px) {
-      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; padding: 3rem 1.5rem; }
       .hero-image-wrap { justify-content: center; margin: 0 auto; }
-      .hero-image-frame { width: 320px; height: 380px; }
+      .hero-image-frame { max-width: 320px; }
       .hero-content { order: 1; }
       .hero-image-wrap { order: 2; }
       .hero-social { justify-content: center; }
-      .hero-desc { margin: 0 auto 2.5rem; }
+      .hero-desc { margin: 0 auto 2rem; max-width: 100%; }
 
       .about-inner { grid-template-columns: 1fr; }
       .about-image-wrap { max-width: 360px; margin: 0 auto; }
@@ -1328,30 +1329,41 @@
     @media (max-width: 768px) {
       .nav-menu { display: none; }
       .hamburger { display: flex; }
-      section { padding: 4rem 0; }
+      .nav-actions { gap: 0.35rem; }
+      .nav-icon-btn,
+      .cv-btn { display: none; }
+      section { padding: 3rem 0; }
 
       .form-row { grid-template-columns: 1fr; }
-      .hero-image-frame { width: 280px; height: 330px; }
+      .hero-image-frame { max-width: 280px; }
       .hero-tag { left: 0; }
       .hero-stats { right: 0; }
       .education-wrap { flex-direction: column; text-align: center; }
       .cv-btn span { display: none; }
+      .hero-desc { margin-bottom: 2rem; }
     }
 
     @media (max-width: 480px) {
-      .container { padding: 0 1.25rem; }
-      .nav-inner { padding: 0 1.25rem; }
-      .hero-image-frame { width: 240px; height: 290px; }
+      .container { padding: 0 1rem; }
+      .nav-inner {
+        padding: 0 1rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.75rem;
+        height: auto;
+      }
+      .nav-logo { font-size: 1.1rem; }
+      .hero-image-frame { max-width: 240px; }
       .hero-stats, .hero-tag { display: none; }
+      .hero-name { font-size: clamp(2.5rem, 10vw, 4rem); }
+      .hero-desc { font-size: 0.95rem; margin-bottom: 1.75rem; }
 
-      /* Proyectos: mejor lectura en celular */
       .project-card { gap: 1.5rem; }
       .project-title { font-size: 1.35rem; }
       .project-desc { font-size: 0.92rem; }
       .project-tags { margin-bottom: 1.25rem; }
       .project-link { width: fit-content; }
 
-      /* Contacto: acomodar formulario */
       .contact-inner { gap: 2.5rem; }
       .form-row { gap: 0.75rem; }
       .form-actions { margin-top: 1.25rem; }
